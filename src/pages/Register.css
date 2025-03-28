@@ -1,0 +1,104 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container Styling */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/images/register-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Register Box */
+.register-box {
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.register-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #00c6ff;
+}
+
+.register-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.register-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Register Button */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #00c6ff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.register-btn:hover {
+    background: #49138c;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.login-link a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .register-box {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .register-box h1 {
+        font-size: 2rem;
+    }
+    
+    .register-box p {
+        font-size: 1rem;
+    }
+}
