@@ -10,7 +10,7 @@ import BookingForm from './components/BookingForm';
 import { AuthProvider } from './context/AuthContext';
 import Contact from './components/Contact';
 import About from './components/About';
-import EventList from "./components/EventList";
+import EventList from "./pages/EventList";
 
 import './index.css';
 
