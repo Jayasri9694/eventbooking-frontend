@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./EventList.css";
+
 const APIBASEURL = "https://event-backend-y12z.onrender.com";
+
 const EventList = () => {
   const [events, setEvents] = useState([]);
   const navigate = useNavigate();
@@ -15,7 +17,7 @@ const EventList = () => {
   }, []);
 
   const handleEventClick = (id) => {
-    navigate(`/events/${id}`); // Navigates to the EventDetailsPage
+    navigate(`/events/${id}`);
   };
 
   return (
@@ -33,7 +35,9 @@ const EventList = () => {
             >
               <h3 className="event-title">{event.name}</h3>
               <p className="event-description">{event.description}</p>
-              <p className="event-date">📅 {new Date(event.date).toLocaleDateString()}</p>
+              <p className="event-date">
+                📅 {new Date(event.date).toLocaleDateString()}
+              </p>
               <p className="event-price">💰 Price: ${event.price}</p>
             </div>
           ))}
