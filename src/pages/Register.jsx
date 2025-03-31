@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Register.css";
 
+const APIBASEURL = "https://event-backend-y12z.onrender.com/";
 const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -8,26 +10,43 @@ const Register = () => {
     password: "",
     confirmPassword: "",
   });
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(null);
+    setSuccess(null);
+    
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
+      setError("Passwords do not match!");
       return;
     }
-    alert("Registration Successful!");
-    setFormData({ name: "", email: "", password: "", confirmPassword: "" });
+    
+    try {
+      await axios.post(`${APIBASEURL}/api/auth/register`, {
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+      });
+      
+      setSuccess("Registration Successful! Please login.");
+      setFormData({ name: "", email: "", password: "", confirmPassword: "" });
+    } catch (err) {
+      setError(err.response?.data?.message || "Something went wrong!");
+    }
   };
-
   return (
     <div className="register-container">
       <div className="register-box">
         <h1>Sign Up</h1>
         <p>Create your account</p>
+        {error && <p className="error-message">{error}</p>}
+        {success && <p className="success-message">{success}</p>}
         <form onSubmit={handleSubmit} className="register-form">
           <input
             type="text"

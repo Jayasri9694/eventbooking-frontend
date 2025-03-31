@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
-
+const APIBASEURL = "https://event-backend-y12z.onrender.com/";
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", formData);
+      const response = await axios.post(`${APIBASEURL}/api/auth/login`, formData);
       console.log("Login successful:", response.data);
       alert("Login successful!");
       setFormData({ email: "", password: "" }); // Reset form after success

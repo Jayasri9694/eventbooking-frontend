@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./EventList.css";
-
+const APIBASEURL = "https://adopt-backend-1.onrender.com";
 const EventList = () => {
   const [events, setEvents] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/events")
+      .get(`${APIBASEURL}/api/events`)
       .then((response) => setEvents(response.data))
       .catch((error) => console.error("Error fetching events:", error));
   }, []);

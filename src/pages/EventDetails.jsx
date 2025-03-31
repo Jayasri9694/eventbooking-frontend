@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./EventDetails.css";
-
+const APIBASEURL = "https://event-backend-y12z.onrender.com/";
 const EventDetails = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
@@ -10,7 +10,7 @@ const EventDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/events/${id}`)
+      .get(`${APIBASEURL}/api/events/${id}`)
       .then((response) => {
         setEvent(response.data);
         setLoading(false);
