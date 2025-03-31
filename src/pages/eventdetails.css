@@ -1,0 +1,141 @@
+.event-details-container {
+    max-width: 800px;
+    margin-top: 170px;
+    margin-left: 350px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .events-title {
+    font-size: 28px;
+    color: white;
+    font-family: poppins;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .events-description {
+    font-size: 18px;
+    color:white;
+    font-family: poppins;
+    margin-bottom: 15px;
+  }
+  
+  .events-date, .events-price, .events-location, .events-category {
+    font-size: 16px;
+    color: #444;
+    background: #f4f4f4;
+    padding: 8px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 8px;
+  }
+  
+  .event-extra-details {
+    margin-top: 20px;
+    text-align: left;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-extra-details p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .event-extra-details b {
+    color: #e74c3c;
+  }
+  
+  @media (max-width: 600px) {
+    .event-details-container {
+      width: 90%;
+      padding: 15px;
+    }
+    
+    .events-title {
+      font-size: 24px;
+    }
+  
+    .events-description, .event-extra-details p {
+      font-size: 16px;
+    }
+  }
+.event-details-container {
+    max-width: 800px;
+    margin-top: 170px;
+    margin-left: 350px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .events-title {
+    font-size: 28px;
+    color: white;
+    font-family: poppins;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .events-description {
+    font-size: 18px;
+    color:white;
+    font-family: poppins;
+    margin-bottom: 15px;
+  }
+  
+  .events-date, .events-price, .events-location, .events-category {
+    font-size: 16px;
+    color: #444;
+    background: #f4f4f4;
+    padding: 8px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 8px;
+  }
+  
+  .event-extra-details {
+    margin-top: 20px;
+    text-align: left;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-extra-details p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .event-extra-details b {
+    color: #e74c3c;
+  }
+  
+  @media (max-width: 600px) {
+    .event-details-container {
+      width: 90%;
+      padding: 15px;
+    }
+    
+    .events-title {
+      font-size: 24px;
+    }
+  
+    .events-description, .event-extra-details p {
+      font-size: 16px;
+    }
+  }
+  
