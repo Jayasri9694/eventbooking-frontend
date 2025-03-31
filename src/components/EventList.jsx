@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./EventList.css";
-const APIBASEURL = "https://adopt-backend-1.onrender.com";
+const APIBASEURL = "https://event-backend-y12z.onrender.com/";
 const EventList = () => {
   const [events, setEvents] = useState([]);
   const navigate = useNavigate();
