@@ -8,6 +8,7 @@ export default defineConfig({
   },
   server: {
     host: 'localhost',  // Use 'localhost' instead of an empty string or IP
-    port: 5173,         // Ensure this port is not blocked
+    port: 5173,  
+    strictPort: true,       // Ensure this port is not blocked
   }
 });
