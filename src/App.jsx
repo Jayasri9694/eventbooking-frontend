@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import {  Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -17,6 +17,7 @@ import './index.css';
 function App() {
   return (
     <AuthProvider>
+      <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>
+      </Router>
     </AuthProvider>
   );
 }
