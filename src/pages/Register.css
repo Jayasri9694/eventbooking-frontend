@@ -12,15 +12,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('/images/register-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Register Box */
-.register-box {
-    max-width: 400px;
     background: rgba(0, 0, 0, 0.7);
     padding: 40px;
     border-radius: 15px;
