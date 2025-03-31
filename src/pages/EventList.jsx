@@ -11,7 +11,7 @@ const EventList = () => {
 
   useEffect(() => {
     axios
-      .get(`${APIBASEURL}/api/events`)
+      .get(`${APIBASEURL}/events`)
       .then((response) => setEvents(response.data))
       .catch((error) => console.error("Error fetching events:", error));
   }, []);
